@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@dd960bd3c3f080561a1810e32349ac211ecec7d4
         with:
           token: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
 
@@ -41,7 +41,7 @@ jobs:
 
       - name: Run Codex to implement tasks
         if: steps.check-tasks.outputs.has_todos == 'true'
-        uses: openai/codex-action@v1
+        uses: openai/codex-action@02e7b2943818fbac9f077c3d1249a198ab358352
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           prompt-file: .ai/codex.prompt.md
