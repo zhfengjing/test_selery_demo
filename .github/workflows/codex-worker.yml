@@ -19,7 +19,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@dd960bd3c3f080561a1810e32349ac211ecec7d4
         with:
-          token: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN || github.token }}
 
       - name: Check for TODO tasks
         id: check-tasks
@@ -72,7 +72,7 @@ jobs:
       - name: Create Pull Request
         if: steps.check-tasks.outputs.has_todos == 'true'
         env:
-          GH_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN || github.token  }}
         run: |
           PR_BODY="## 🤖 Codex Implementation Report
 
