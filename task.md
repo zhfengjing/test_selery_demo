@@ -77,3 +77,18 @@
   - Use dummy node technique for clean implementation
   - Include time & space complexity comments
   - Add at least 4 test cases (including edge cases: both empty, one empty, equal length, different lengths)
+
+---
+
+### LC-092 Reverse Linked List II
+- Status: TODO
+- Path: problems/092-reverse-linked-list-ii
+- Requirements:
+  - TypeScript
+  - Reverse a linked list from position left to right (1-indexed)
+  - O(n) time, O(1) space
+  - Problem: Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list
+  - Reuse or define ListNode class/interface
+  - Use one-pass algorithm with careful pointer manipulation
+  - Include time & space complexity comments
+  - Add at least 5 test cases (including edge cases: reverse entire list, reverse from head, reverse to tail, reverse single node, reverse middle section)
