@@ -2,7 +2,7 @@ name: Codex Worker
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - 'task.md'
   workflow_dispatch:
@@ -92,7 +92,7 @@ jobs:
           PR_URL=$(gh pr create \
             --title "🤖 Codex Solutions - $(date +%Y%m%d-%H%M%S)" \
             --body "$PR_BODY" \
-            --base main \
+            --base master \
             --head "$BRANCH_NAME")
 
           echo "Created PR: $PR_URL"
